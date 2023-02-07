@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: anton;
+    src: url(../tipografia/Anton-Regular.ttf);
+}
+.container{
+    padding: 1rem;
+}
+.row, .row1, .linea{
+   font-family: anton;
+}
+.menu{ /*This is the menu for the product*/
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}.tittle{text-shadow: 4px 3px 10px #85177d;
+    grid-column: 1/10;
+}.image{
+    display: flex;
+    justify-content: center;
+    grid-column: 10/11;   
+}
+ /*color for boxes*/
+.color1{
+    color: #7C2FA5;
+    background-color: black;
+}
+.color41{
+    background-color: black;
+}
+.color42{
+    background-color: rgb(255, 255, 255);
+}
+.color3{
+    background-color:#538F7C;
+}
+.color5{
+    background-color:#000000;
+    display: flex;
+    text-align: center;
+   text-shadow: 2px 4px 6px#85177d;
+}
+.altura1{
+    height: 4rem;
+}
+.altura2{
+    height: 12rem;
+}
+.altura3{
+    height: 14rem;
+}
+.altura4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+}
+.altura5{
+    height: 6rem;
+}
+.cajaNegra{
+    background-color: white;
+}
+.cajaBlanca{
+    background-color: black;
+}
+.cajaBlanca, .cajaNegra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linea{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    place-items: center;
+    overflow: hidden;
+}
+.linea::before{
+    content: '';
+    position: absolute;
+    width: 1550px;
+    height: 1550px;
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(61, 13, 76));
+    animation: rotate 2s linear infinite;   
+}
+.linea::after{
+    content: '';
+    position: absolute;
+    width: 1550px;
+    height: 1550px;
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(92, 45, 91));
+    animation: rotate 3s linear infinite;
+    
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
